@@ -2,127 +2,181 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Premium Domain for Sale: xlana.com</title>
+    <title>Buy xlana.com - Premium Domain for Sale</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font Awesome CDN -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #e0f7fa, #f0f4ff);
+            background: linear-gradient(120deg, #eef7ff, #e3f9f1);
             color: #102a43;
             margin: 0;
             padding: 0;
         }
+        header {
+            background: #1a73e8;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background: #f1f5fb;
+            padding: 12px 0;
+        }
+        .nav button {
+            background: none;
+            border: none;
+            margin: 0 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            color: #1a73e8;
+            transition: color 0.3s;
+        }
+        .nav button:hover {
+            color: #0c48a1;
+        }
         .container {
-            max-width: 600px;
-            margin: 60px auto;
+            max-width: 700px;
+            margin: 30px auto;
             background: #ffffff;
             border-radius: 16px;
             box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
-            padding: 30px 28px;
+            padding: 28px;
         }
-        h1 {
-            margin-bottom: 10px;
+        section {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        section.active {
+            display: block;
+        }
+        .section-title {
+            font-size: 1.4em;
+            margin-bottom: 15px;
             color: #1a73e8;
-            font-size: 2em;
-            text-align: center;
-        }
-        .motiv {
-            background: #f1f8ff;
-            padding: 16px;
-            border-left: 5px solid #2196f3;
-            border-radius: 8px;
-            margin: 20px 0;
-            font-size: 1.1em;
         }
         ul {
-            margin: 20px 0;
             padding-left: 20px;
+            margin-top: 0;
         }
         ul li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             font-size: 1.05em;
         }
-        .wallet,
-        .whatsapp {
-            background: #eef9f1;
+        .wallet, .whatsapp {
+            background: #f4fbf6;
+            border-left: 5px solid #4caf50;
             border-radius: 8px;
-            padding: 12px 14px;
-            margin-bottom: 15px;
-            font-size: 1.05em;
+            padding: 12px;
+            margin: 15px 0;
             display: flex;
             align-items: center;
             gap: 12px;
+            font-size: 1.05em;
         }
-        .wallet i,
-        .whatsapp i {
-            color: #4caf50;
-            font-size: 1.4em;
+        .wallet i, .whatsapp i {
+            font-size: 1.5em;
         }
         .wallet code {
-            font-family: monospace;
-            background: #f9f9f9;
-            padding: 4px 6px;
-            border-radius: 4px;
-            display: inline-block;
-        }
-        .whatsapp a {
-            color: #1e9e68;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .whatsapp a:hover {
-            text-decoration: underline;
-        }
-        .cta {
+            background: #eef0f2;
+            padding: 5px 8px;
+            border-radius: 5px;
             display: block;
+            word-break: break-all;
+        }
+        a.cta {
+            display: block;
+            margin: 20px auto 0 auto;
+            padding: 14px 26px;
             text-align: center;
-            margin: 25px auto 0 auto;
-            padding: 12px 24px;
             background: #1a73e8;
             color: #fff;
-            border: none;
             border-radius: 8px;
             font-size: 1.15em;
             text-decoration: none;
             transition: background 0.3s;
-            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+            width: fit-content;
         }
-        .cta:hover {
+        a.cta:hover {
             background: #155ab6;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
+    <header>
+        Premium Domain for Sale: xlana.com
+    </header>
+
+    <nav class="nav">
+        <button onclick="showSection('about')"><i class="fa-solid fa-bullhorn"></i> Why xlana.com?</button>
+        <button onclick="showSection('details')"><i class="fa-solid fa-star"></i> Domain Details</button>
+        <button onclick="showSection('payment')"><i class="fa-brands fa-solana"></i> Payment Info</button>
+        <button onclick="showSection('contact')"><i class="fa-brands fa-whatsapp"></i> Contact</button>
+    </nav>
+
     <div class="container">
-        <h1><i class="fa-solid fa-globe"></i> Buy <strong>xlana.com</strong> Today!</h1>
-        <div class="motiv">
+        <section id="about" class="active">
+            <div class="section-title">Why Choose <strong>xlana.com</strong>?</div>
             <p>
-                <strong>xlana.com</strong> is a short, brandable domain that's perfect for your next big project. Ideal for startups, Web3 ventures, tech products, or digital brands. Grab this unique opportunity now!
+                <strong>xlana.com</strong> is a short, brandable, and highly memorable domain that can instantly elevate your brand. 
+                Whether you're building a Web3 startup, launching a tech product, or developing a modern brand, this domain gives you:
             </p>
-        </div>
-        <ul>
-            <li><i class="fa-solid fa-star text-gold"></i> Premium, one-word brand name.</li>
-            <li><i class="fa-solid fa-coins"></i> Ideal for crypto, fintech, and tech industries.</li>
-            <li><i class="fa-solid fa-check-circle"></i> Build instant trust and recognition.</li>
-        </ul>
-        <div class="wallet">
-            <i class="fa-brands fa-solana"></i>
-            <div>
-                <b>Solana Wallet Address:</b><br>
-                <code>3o4v8MPBZMnJ6TiFwGcm4zVbPMegLuV1XSuqeRnJVDKS</code>
+            <ul>
+                <li><i class="fa-solid fa-check-circle"></i> Instant authority and trust.</li>
+                <li><i class="fa-solid fa-globe"></i> Global appeal with a catchy sound.</li>
+                <li><i class="fa-solid fa-rocket"></i> Perfect for innovation-driven platforms.</li>
+            </ul>
+        </section>
+
+        <section id="details">
+            <div class="section-title">Domain Highlights</div>
+            <ul>
+                <li><i class="fa-solid fa-bolt"></i> Ultra-premium, one-word domain.</li>
+                <li><i class="fa-solid fa-brain"></i> Easy to remember, spell, and share.</li>
+                <li><i class="fa-solid fa-signal"></i> Ideal for Web3, crypto, fintech, or SaaS projects.</li>
+            </ul>
+        </section>
+
+        <section id="payment">
+            <div class="section-title">Payment Information</div>
+            <div class="wallet">
+                <i class="fa-brands fa-solana"></i>
+                <div>
+                    <b>Solana Wallet Address:</b>
+                    <code>3o4v8MPBZMnJ6TiFwGcm4zVbPMegLuV1XSuqeRnJVDKS</code>
+                </div>
             </div>
-        </div>
-        <div class="whatsapp">
-            <i class="fa-brands fa-whatsapp"></i>
-            <div>
-                After payment, <a href="https://wa.me/message/S3AQJRCJ4MYSP1" target="_blank">contact us on WhatsApp</a> to confirm the transaction and initiate the domain transfer.
+        </section>
+
+        <section id="contact">
+            <div class="section-title">Confirm Your Purchase</div>
+            <div class="whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+                <div>
+                    After payment, please <a href="https://wa.me/message/S3AQJRCJ4MYSP1" target="_blank">message us on WhatsApp</a> 
+                    to confirm the transaction and initiate the domain transfer.
+                </div>
             </div>
-        </div>
-        <a class="cta" href="https://wa.me/message/S3AQJRCJ4MYSP1" target="_blank">
-            <i class="fa-solid fa-cart-shopping"></i> Start Your Purchase
-        </a>
+            <a class="cta" href="https://wa.me/message/S3AQJRCJ4MYSP1" target="_blank">
+                <i class="fa-solid fa-cart-shopping"></i> Start Your Purchase
+            </a>
+        </section>
     </div>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
 </body>
 </html>
