@@ -13,6 +13,7 @@
     margin: 0;
     background: linear-gradient(135deg, #283e51, #485563);
     color: #e0e6f0;
+    line-height: 1.6;
   }
   header {
     background-color: #1f2a44;
@@ -29,107 +30,103 @@
     margin: 0;
     color: #ffd54f;
     font-weight: 700;
-    font-size: 1.8em;
+    font-size: 2.2em;
   }
   nav a {
     color: #cbd5e1;
-    margin-left: 20px;
+    margin-left: 25px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1.1em;
   }
   nav a:hover {
     color: #ffd54f;
   }
   .container {
-    max-width: 750px;
-    margin: 40px auto 80px;
+    max-width: 800px;
+    margin: 40px auto 100px;
     padding: 0 20px;
   }
   .section-title {
-    font-size: 1.6em;
+    font-size: 1.9em;
     margin-bottom: 15px;
     color: #ffd54f;
-    cursor: pointer;
-    user-select: none;
+    font-weight: 700;
     display: flex;
     align-items: center;
-  }
-  .section-title i {
-    margin-right: 10px;
-    transition: transform 0.3s ease;
-  }
-  .section-title.active i {
-    transform: rotate(90deg);
+    gap: 12px;
   }
   .accordion-content {
     background: #32475a;
-    border-radius: 8px;
-    padding: 15px 20px;
-    margin-bottom: 20px;
-    line-height: 1.5;
-    font-size: 1.1em;
-    display: none;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    font-size: 1.2em;
     color: #cbd5e1;
   }
   ul {
-    padding-left: 20px;
-    margin-top: 8px;
+    padding-left: 28px;
+    margin-top: 12px;
   }
   ul li {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     position: relative;
   }
   ul li::before {
     content: "✔";
     color: #ffd54f;
     position: absolute;
-    left: -20px;
+    left: -24px;
+    font-weight: bold;
   }
   .price-tag {
     background: #ffd54f;
     color: #1f2a44;
-    font-weight: 700;
+    font-weight: 900;
     display: inline-block;
-    padding: 8px 15px;
-    border-radius: 25px;
-    font-size: 1.3em;
-    margin-top: 15px;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 1.7em;
+    margin-top: 20px;
+    box-shadow: 0 0 15px #ffd54faa;
   }
   .wallet, .whatsapp {
     background: #1b2a44;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    font-size: 1.1em;
+    padding: 25px 28px;
+    border-radius: 16px;
+    margin-top: 25px;
+    font-size: 1.2em;
   }
   code {
     display: block;
     background: #142533;
-    padding: 10px;
-    border-radius: 6px;
-    font-size: 1em;
-    margin-top: 8px;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    margin-top: 10px;
     user-select: text;
+    font-family: 'Courier New', Courier, monospace;
   }
   .cta {
     display: inline-block;
     background-color: #ffd54f;
     color: #1f2a44;
-    font-weight: 700;
-    padding: 14px 28px;
-    border-radius: 30px;
-    font-size: 1.2em;
+    font-weight: 900;
+    padding: 18px 36px;
+    border-radius: 40px;
+    font-size: 1.3em;
     text-decoration: none;
-    box-shadow: 0 4px 8px #b48c00;
+    box-shadow: 0 6px 14px #b48c00;
     transition: background-color 0.3s ease;
+    margin-top: 30px;
   }
   .cta:hover {
     background-color: #e6c52a;
   }
   footer {
     text-align: center;
-    padding: 25px 10px;
-    font-size: 0.9em;
+    padding: 30px 10px;
+    font-size: 1em;
     color: #94a3b8;
   }
   /* Floating WhatsApp button */
@@ -139,34 +136,38 @@
     right: 25px;
     background: #25d366;
     color: white;
-    border-radius: 12px;
-    padding: 14px 18px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    border-radius: 16px;
+    padding: 16px 22px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
     cursor: pointer;
-    max-width: 320px;
+    max-width: 340px;
     z-index: 9999;
     user-select: none;
     text-decoration: none;
   }
   #whatsapp-float i {
-    font-size: 30px;
-    margin-right: 14px;
+    font-size: 32px;
+    margin-right: 16px;
   }
   #whatsapp-float div {
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 700;
+    font-size: 15px;
     line-height: 1.3;
   }
   @media (max-width: 480px) {
     .container {
-      margin: 30px 10px 80px;
+      margin: 30px 15px 100px;
     }
     #whatsapp-float {
-      max-width: 260px;
-      padding: 12px 16px;
+      max-width: 280px;
+      padding: 14px 18px;
+    }
+    nav a {
+      font-size: 1em;
+      margin-left: 15px;
     }
   }
 </style>
@@ -176,7 +177,7 @@
   <h1>xlana.com</h1>
   <nav>
     <a href="#about-content">About</a>
-    <a href="#payment-content">Solana</a>
+    <a href="#payment-content">Solana Price</a>
     <a href="#afternic-content">Afternic</a>
     <a href="#contact-content">Contact</a>
   </nav>
@@ -184,51 +185,52 @@
 
 <div class="container">
 
-  <div class="section-title" id="about-header">
-    <i class="fa-solid fa-info-circle"></i> About xlana.com
-  </div>
-  <div class="accordion-content" id="about-content">
-    <p><strong>xlana.com</strong> is a rare premium domain designed for modern digital ventures. It’s short, catchy, brandable, and easy to remember—perfect for:</p>
-    <ul>
-      <li>Crypto & Blockchain Startups</li>
-      <li>Web3 Projects & NFTs</li>
-      <li>Fintech & Trading Apps</li>
-      <li>AI & SaaS Platforms</li>
-    </ul>
-  </div>
-
-  <div class="section-title" id="payment-header">
-    <i class="fa-brands fa-solana"></i> Payment & Price
-  </div>
-  <div class="accordion-content" id="payment-content">
-    <p>Price: <span class="price-tag">169 SOL</span></p>
-    <div class="wallet">
-      <b>Solana Wallet Address:</b>
-      <code>3o4v8MPBZMnJ6TiFwGcm4zVbPMegLuV1XSuqeRnJVDKS</code>
+  <section id="about-content">
+    <h2 class="section-title"><i class="fa-solid fa-info-circle"></i> About xlana.com</h2>
+    <div class="accordion-content">
+      <p><strong>xlana.com</strong> is a rare premium domain designed for modern digital ventures. It’s short, catchy, brandable, and easy to remember — perfect for:</p>
+      <ul>
+        <li>Crypto & Blockchain Startups</li>
+        <li>Web3 Projects & NFTs</li>
+        <li>Fintech & Trading Apps</li>
+        <li>AI & SaaS Platforms</li>
+        <li>Tech & Innovation Brands</li>
+      </ul>
     </div>
-  </div>
+  </section>
 
-  <div class="section-title" id="afternic-header">
-    <i class="fa-solid fa-cart-shopping"></i> Buy via Afternic
-  </div>
-  <div class="accordion-content" id="afternic-content">
-    <p>You can purchase <strong>xlana.com</strong> for <strong>169 SOL</strong> (or equivalent in USD) instantly and securely via GoDaddy / Afternic:</p>
-    <a href="https://checkoutLink.godaddy.com/1f02a33a-9adc-4129-9310-f7dca22caf97" target="_blank" class="cta">
-      <i class="fa-solid fa-cart-shopping"></i> Buy on Afternic
-    </a>
-  </div>
+  <section id="payment-content">
+    <h2 class="section-title"><i class="fa-brands fa-solana"></i> Payment & Price</h2>
+    <div class="accordion-content">
+      <p>Price: <span class="price-tag">169 SOL</span></p>
+      <div class="wallet">
+        <b>Solana Wallet Address:</b>
+        <code>3o4v8MPBZMnJ6TiFwGcm4zVbPMegLuV1XSuqeRnJVDKS</code>
+      </div>
+    </div>
+  </section>
 
-  <div class="section-title" id="contact-header">
-    <i class="fa-brands fa-whatsapp"></i> Contact & Confirmation
-  </div>
-  <div class="accordion-content" id="contact-content">
-    <div class="whatsapp">
-      <p>After payment, <strong>please contact us on WhatsApp</strong> to confirm your transaction:</p>
-      <a href="https://wa.me/message/S3AQJRCJ4MYSP1" target="_blank" class="cta">
-        <i class="fa-brands fa-whatsapp"></i> Message Us Now
+  <section id="afternic-content">
+    <h2 class="section-title"><i class="fa-solid fa-cart-shopping"></i> Buy via Afternic</h2>
+    <div class="accordion-content">
+      <p>You can purchase <strong>xlana.com</strong> for <strong>169 SOL</strong> (or equivalent in USD) instantly and securely via GoDaddy / Afternic:</p>
+      <a href="https://checkoutLink.godaddy.com/1f02a33a-9adc-4129-9310-f7dca22caf97" target="_blank" class="cta" rel="noopener noreferrer">
+        <i class="fa-solid fa-cart-shopping"></i> Buy on Afternic
       </a>
     </div>
-  </div>
+  </section>
+
+  <section id="contact-content">
+    <h2 class="section-title"><i class="fa-brands fa-whatsapp"></i> Contact & Confirmation</h2>
+    <div class="accordion-content">
+      <div class="whatsapp">
+        <p>After payment, <strong>please contact us on WhatsApp</strong> to confirm your transaction:</p>
+        <a href="https://wa.me/message/S3AQJRCJ4MYSP1" target="_blank" class="cta" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Message Us Now
+        </a>
+      </div>
+    </div>
+  </section>
 
 </div>
 
@@ -237,24 +239,10 @@
 </footer>
 
 <!-- WhatsApp floating button -->
-<a href="https://wa.me/message/S3AQJRCJ4MYSP1" target="_blank" id="whatsapp-float" aria-label="Contact via WhatsApp">
+<a href="https://wa.me/message/S3AQJRCJ4MYSP1" target="_blank" id="whatsapp-float" aria-label="Contact via WhatsApp" rel="noopener noreferrer">
   <i class="fa-brands fa-whatsapp"></i>
   <div>After payment, send your transaction TXT link</div>
 </a>
 
-<script>
-  // Accordion toggle
-  document.querySelectorAll('.section-title').forEach(header => {
-    header.addEventListener('click', () => {
-      header.classList.toggle('active');
-      const content = header.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    });
-  });
-</script>
 </body>
 </html>
