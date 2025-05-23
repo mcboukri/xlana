@@ -150,6 +150,7 @@
     max-width: 320px;
     z-index: 9999;
     user-select: none;
+    text-decoration: none;
   }
   #whatsapp-float i {
     font-size: 30px;
@@ -233,3 +234,29 @@
 </div>
 
 <footer>
+  &copy; 2025 xlana.com | Premium Domain Marketplace
+</footer>
+
+<!-- WhatsApp floating button -->
+<a href="https://wa.me/message/S3AQJRCJ4MYSP1" target="_blank" id="whatsapp-float" aria-label="Contact via WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+  <div>After payment, send your transaction TXT link</div>
+</a>
+
+<script>
+  // Accordion toggle
+  document.querySelectorAll('.section-title').forEach(header => {
+    header.addEventListener('click', () => {
+      header.classList.toggle('active');
+      const content = header.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
