@@ -1,1 +1,102 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Solana Investment</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #2b2d42, #1e1f26);
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #222;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      color: #14f195;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-size: 16px;
+    }
+
+    select, button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    select {
+      background-color: #1e1f26;
+      color: #fff;
+    }
+
+    button {
+      background-color: #14f195;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #10cfae;
+    }
+
+    .wallet-popup {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #14f195;
+      border-radius: 10px;
+      background-color: #1e1f26;
+      color: #14f195;
+      font-weight: bold;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Double Your Solana</h1>
+    <label for="amount">Choose Deposit Amount:</label>
+    <select id="amount">
+      <option value="1">1 SOL</option>
+      <option value="2">2 SOL</option>
+      <option value="5">5 SOL</option>
+      <option value="10">10 SOL</option>
+    </select>
+    <button onclick="showWallet()">Deposit</button>
+
+    <div id="walletPopup" class="wallet-popup">
+      Send SOL to this address:<br>
+      <span>3o4v8MPBZMnJ6TiFwGcm4zVbPMegLuV1XSuqeRnJVDKS</span>
+    </div>
+  </div>
+
+  <script>
+    function showWallet() {
+      document.getElementById("walletPopup").style.display = "block";
+    }
+  </script>
+</body>
+</html>
