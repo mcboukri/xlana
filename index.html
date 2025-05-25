@@ -169,7 +169,7 @@
   <nav>
     <a href="#about-content">Why Buy</a>
     <a href="#payment-content">Investment</a>
-    <a href="#afternic-content">Buy Now</a>
+    <a href="#Godaddy-content">Buy Now</a>
     <a href="#contact-content">Support</a>
   </nav>
 </header>
@@ -177,7 +177,7 @@
   <section id="about-content">
     <h2 class="section-title"><i class="fa-solid fa-star"></i> Why Own xlana.com?</h2>
     <div class="accordion-content">
-      <p><strong>xlana.com</strong> is more than a domain — it's your brand’s launchpad in the world of Web3. Short, powerful, brandable, and designed to thrive in the crypto and tech space.</p>
+      <p><strong>xlana.com</strong> is more than a domain — it's your brand's launchpad in the world of Web3. Short, powerful, brandable, and designed to thrive in the crypto and tech space.</p>
       <ul>
         <li>Instant recognition in the Solana ecosystem</li>
         <li>Perfect for DeFi, NFT, and Web3 platforms</li>
@@ -188,80 +188,89 @@
     </div>
   </section>
 
-<!-- Pay with Solana Section (169 sol)-->
-<div style="text-align: center; margin-top: 50px;">
-  <button id="solanaPayBtn" style="
-    background-color: #00ffa3;
-    color: #00332c;
-    padding: 16px 34px;
-    font-size: 1.2em;
-    font-weight: bold;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 6px 15px rgba(0, 255, 163, 0.4);
-    transition: background-color 0.3s ease;
-  ">
-    💸 Pay with Solana (169 sol)
-  </button>
+  <!-- Pay with Solana Section (169 sol)-->
+  <div style="text-align: center; margin-top: 50px;">
+    <button id="solanaPayBtn" style="
+      background-color: #00ffa3;
+      color: #00332c;
+      padding: 16px 34px;
+      font-size: 1.2em;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0, 255, 163, 0.4);
+      transition: background-color 0.3s ease;
+    ">
+      💸 Pay with Solana (169 sol)
+    </button>
 
-  <div id="walletInfo" style="display: none; margin-top: 25px; background-color: #1e293b; color: #ffffff; padding: 22px; border-radius: 16px; max-width: 520px; margin-left: auto; margin-right: auto;">
-    <p style="margin: 0 0 12px;"><strong>Solana Wallet Address:</strong></p>
-    <code id="walletAddress" style="display: block; font-size: 1.1em; background: #0f172a; padding: 14px; border-radius: 10px; user-select: all; cursor: pointer;">3o4v8MPBZMnJ6TiFwGcm4zVbPMegLuV1XSuqeRnJVDKS</code>
-    
-    <p id="copyMsg" style="display:none; color: #22c55e; font-weight: bold; margin-top: 10px;">✔ Address copied to clipboard!</p>
+    <div id="walletInfo" style="display: none; margin-top: 25px; background-color: #1e293b; color: #ffffff; padding: 22px; border-radius: 16px; max-width: 520px; margin-left: auto; margin-right: auto;">
+      <p style="margin: 0 0 12px;"><strong>Solana Wallet Address:</strong></p>
+      <code id="walletAddress" style="display: block; font-size: 1.1em; background: #0f172a; padding: 14px; border-radius: 10px; user-select: all; cursor: pointer;">3o4v8MPBZMnJ6TiFwGcm4zVbPMegLuV1XSuqeRnJVDKS</code>
+      
+      <p id="copyMsg" style="display:none; color: #22c55e; font-weight: bold; margin-top: 10px;">✔ Address copied to clipboard!</p>
 
-    <p style="margin-top: 18px;"><strong>⏳ Time left to complete your deposit:</strong> <span id="countdown">15:00</span></p>
-    
-    <p style="margin-top: 20px; color: #94a3b8;">After payment, send us the confirmation via WhatsApp to complete the transfer process.</p>
+      <p style="margin-top: 18px;"><strong>⏳ Time left to complete your deposit:</strong> <span id="countdown">15:00</span></p>
+      
+      <p style="margin-top: 20px; color: #94a3b8;">After payment, send us the confirmation via WhatsApp to complete the transfer process.</p>
+    </div>
   </div>
-</div>
 
-<script>
-  const button = document.getElementById("solanaPayBtn");
-  const walletInfo = document.getElementById("walletInfo");
-  const countdown = document.getElementById("countdown");
-  const walletAddress = document.getElementById("walletAddress");
-  const copyMsg = document.getElementById("copyMsg");
-  let interval;
+  <script>
+    const button = document.getElementById("solanaPayBtn");
+    const walletInfo = document.getElementById("walletInfo");
+    const countdown = document.getElementById("countdown");
+    const walletAddress = document.getElementById("walletAddress");
+    const copyMsg = document.getElementById("copyMsg");
+    let interval;
 
-  button.addEventListener("click", () => {
-    walletInfo.style.display = "block";
-    startCountdown(15); // 15-minute countdown
-  });
-
-  function startCountdown(minutes) {
-    clearInterval(interval);
-    let time = minutes * 60;
-    interval = setInterval(() => {
-      let mins = Math.floor(time / 60);
-      let secs = time % 60;
-      countdown.textContent = `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
-      if (time <= 0) {
-        clearInterval(interval);
-        countdown.textContent = "⏱ Time expired!";
-      }
-      time--;
-    }, 1000);
-  }
-
-  walletAddress.addEventListener("click", () => {
-    const text = walletAddress.textContent;
-    navigator.clipboard.writeText(text).then(() => {
-      copyMsg.style.display = "block";
-      setTimeout(() => {
-        copyMsg.style.display = "none";
-      }, 2500);
+    button.addEventListener("click", () => {
+      walletInfo.style.display = "block";
+      startCountdown(15); // 15-minute countdown
     });
-  });
-</script>
 
+    function startCountdown(minutes) {
+      clearInterval(interval);
+      let time = minutes * 60;
+      interval = setInterval(() => {
+        let mins = Math.floor(time / 60);
+        let secs = time % 60;
+        countdown.textContent = `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
+        if (time <= 0) {
+          clearInterval(interval);
+          countdown.textContent = "⏱ Time expired!";
+        }
+        time--;
+      }, 1000);
+    }
 
-  <section id="afternic-content">
-    <h2 class="section-title"><i class="fa-solid fa-cart-shopping"></i> Buy via Afternic</h2>
+    walletAddress.addEventListener("click", () => {
+      const text = walletAddress.textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        copyMsg.style.display = "block";
+        setTimeout(() => {
+          copyMsg.style.display = "none";
+        }, 2500);
+      });
+    });
+  </script>
+
+  <section id="daaz-content">
+    <h2 class="section-title"><i class="fa-solid fa-globe"></i> Buy via DAAZ</h2>
     <div class="accordion-content">
-      <p>Prefer traditional checkout? Purchase <strong>xlana.com</strong> instantly through GoDaddy’s Afternic platform:</p>
-      <a href="https://checkoutLink.godaddy.com/1f02a33a-9adc-4129-9310-f7dca22caf97" target="_blank" class="cta">
+      <p>Purchase <strong>xlana.com</strong> securely through the DAAZ domain marketplace with escrow protection:</p>
+      <a href="https://daaz.com/make/offer/domains/xlana.com" target="_blank" class="cta">
+        <i class="fa-solid fa-handshake"></i> Make Offer on DAAZ
+      </a>
+    </div>
+  </section>
+
+  <section id="Godaddy-content">
+    <h2 class="section-title"><i class="fa-solid fa-cart-shopping"></i> Buy via Godaddy</h2>
+    <div class="accordion-content">
+      <p>Prefer traditional checkout? Purchase <strong>xlana.com</strong> instantly through GoDaddy's Godaddy platform:</p>
+      <a href="https://www.godaddy.com/en/domainsearch/find?domainToCheck=xlana.com&tmskey=sem_godaddy_brand" target="_blank" class="cta">
         <i class="fa-solid fa-cart-shopping"></i> Secure It Now
       </a>
     </div>
